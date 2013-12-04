@@ -1,0 +1,30 @@
+{
+  "name": "irc-message-stream",
+  "version": "0.1.0",
+  "description": "A tiny Strram interface around irc-message.",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "coffee --bare --compile lib/*.coffee && coffee --bare --compile test/*.coffee",
+    "build": "coffee --bare --compile lib/*.coffee && coffee --bare --compile test/*.coffee",
+    "test": "vows --spec test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expr/irc-message-stream.git"
+  },
+  "devDependencies": {
+    "vows": "0.7.x",
+    "coffee-script": "1.6.3"
+  },
+  "keywords": [
+    "irc",
+    "stream",
+    "chat"
+  ],
+  "author": "Fionn Kelleher <me@fionn.co>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/expr/irc-message-stream/issues"
+  },
+  "homepage": "https://github.com/expr/irc-message-stream"
+}
