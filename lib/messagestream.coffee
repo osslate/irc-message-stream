@@ -27,3 +27,5 @@ MessageStream::_transform = (chunk, encoding, done) ->
     catch err
       @emit "error", err
   done()
+
+exports = module.exports = MessageStream

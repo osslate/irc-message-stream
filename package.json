@@ -12,6 +12,9 @@
     "type": "git",
     "url": "https://github.com/expr/irc-message-stream.git"
   },
+  "dependencies": {
+    "irc-message": "0.2.x"
+  },
   "devDependencies": {
     "vows": "0.7.x",
     "coffee-script": "1.6.3"
