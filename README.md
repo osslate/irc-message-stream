@@ -17,7 +17,7 @@ messageStream.on("line", function(line) {
     console.log("Got raw line: " + line);
 });
 
-messageStream.on("parsed", function(message) {
+messageStream.on("data", function(message) {
     console.log("Got parsed message: " + JSON.stringify(message));
 });
 
