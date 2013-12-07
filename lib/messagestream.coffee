@@ -9,9 +9,10 @@ Message = require "irc-message"
 util = require "util"
 
 class MessageStream
-  constructor: (options) ->
-    @buffer = ""
+  constructor: (options = {}) ->
+    options.objectMode = true
     Transform.call(this, options)
+    @buffer = ""
 
 util.inherits MessageStream, Transform
 
