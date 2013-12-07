@@ -19,11 +19,11 @@ MessageStream::_transform = (chunk, encoding, done) ->
   @buffer += chunk.toString()
   lines = @buffer.split "\r\n"
   @buffer = lines.pop()
-  lines.forEach (line) =>
+  for line in lines
     @emit "line", line
     try
       message = new Message line
-      @emit "parsed", message
+      @push message
     catch err
       @emit "error", err
   done()
