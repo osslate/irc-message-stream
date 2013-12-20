@@ -22,11 +22,11 @@ MessageStream::_transform = (chunk, encoding, done) ->
   @buffer = lines.pop()
   for line in lines
     @emit "line", line
-    try
-      message = new Message line
+    message = Message line
+    if message != null
       @push message
-    catch err
-      @emit "error", err
+    else
+      @emit "error", new Error "Unparsable IRC message received."
   done()
 
 exports = module.exports = MessageStream

@@ -1,6 +1,6 @@
 {
   "name": "irc-message-stream",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A tiny Strram interface around irc-message.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/expr/irc-message-stream.git"
   },
   "dependencies": {
-    "irc-message": "0.2.x"
+    "irc-message": "1.0.x"
   },
   "devDependencies": {
     "vows": "0.7.x",
