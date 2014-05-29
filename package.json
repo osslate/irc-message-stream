@@ -4,8 +4,6 @@
   "description": "A tiny Strram interface around irc-message.",
   "main": "index.js",
   "scripts": {
-    "prepublish": "coffee --bare --compile lib/*.coffee && coffee --bare --compile test/*.coffee",
-    "build": "coffee --bare --compile lib/*.coffee && coffee --bare --compile test/*.coffee",
     "test": "vows --spec test/*.js"
   },
   "repository": {
