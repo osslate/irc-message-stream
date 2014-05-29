@@ -1,4 +1,1 @@
 node_modules/
-*.tgz
-lib/*.js
-test/*.js
