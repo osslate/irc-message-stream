@@ -13,6 +13,12 @@ module.exports = function messageStream () {
 
     lineStream.on("data", function (line) {
         var message = parseMessage(line);
+
+        if (message === null) {
+            var error = new Error("Invalid line read: " + line);
+            return stream.emit("error", error);
+        }
+
         stream.queue(message);
     });
 
